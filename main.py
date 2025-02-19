@@ -14,8 +14,8 @@ for i, row in df.iterrows():
     pdf.cell(w=0, h=12, txt=row["Topic"], border=0, ln=1, align="L", fill=False, link="")
     pdf.line(x1=10, y1=21, x2=200, y2=21)
 
-
-
+    for i in range(row["Pages"] - 1):
+        pdf.add_page()
 
 
 
